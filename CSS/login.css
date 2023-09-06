@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/* Mengatur tampilan pada keseluruhan */
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+
+/* untuk mengatur pada bagian body */
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   /* Menambahkan gambar untuk menjadi background */
+   background: url('logo.png') no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.wrapper{
+   width: 420px;
+   /* agar hasil form lebih transparan */
+   background: transparent;
+   border: 2px solid rgba(225, 225, 225, .2);
+   /* Untuk form agak ngeblur */
+   backdrop-filter: blur(1.5px);
+   box-shadow: 0 0 10px rgba(225, 225, 225, .2);
+   color: #ffff;
+   border-radius: 10px;
+   padding: 30px 40px;
+}
+
+/* Mengedit bagian h1 */
+.wrapper h1{
+   font-size: 36px;
+   text-align: center;
+}
+
+/* Untuk memberikan broder pada input-box */
+.wrapper .input-box{
+   border-radius: 80px;
+   width: 100%;
+   height: 50px;
+   background: red;
+   margin: 30px 0;
+}
+
+/* Untuk mengatur box inputan  */
+.input-box input{
+   width: 100%;
+   height: 100%;
+   background: transparent;
+   border: none;
+   outline: none;
+   border-radius: 80px;
+   border: 2px solid rgba(225, 225, 225, .2);
+   padding: 20px 45px 20px 20px;
+}
+
+/* Memberikan warna pada placeholder */
+.input-box input::placeholder{
+   color: #fff;
+}
+
+.input-box i{
+   position: absolute;
+   right: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 20px;
+}
+
+/* Mengatur posisi pada class remember-forgot */
+.wrapper .remember-forgot{
+   display: flex;
+   justify-content: space-between;
+   font-size: 14.5px;
+   margin: -15px 0 15px;
+}
+
+/* Mengatur jarak dan memeberi warna untuk class remember-forgot pada label dan input */
+.remember-forgot label input{
+   accent-color: #fff;
+   margin-right: 3px;
+}
+
+.remember-forgot a{
+   color: #fff;
+   text-decoration: none;
+}
+
+/* Mengatur lebar, tinggi serta memberi background pada class btn */
+.wrapper .btn{
+   width: 100%;
+   height: 45px;
+   background: #fff;
+   border: none;
+   outline: none;
+   border-radius: 40px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+   cursor: pointer;
+   font-size: 16px;
+   color: #333;
+   font-weight: 600;
+}
+
+/* Memberikan hover pada class btn agar ketika kursor mengarah pada btn maka akan mengganti warna background */
+.wrapper .btn:hover{
+   background: red;
+}
+
+/* Mengatur jarak dan ukuran pada class register-link */
+.wrapper .register-link{
+   font-size: 0.8rem;
+   text-align: center;
+   margin: 20px 0 15px;
+}
+
+/* Mengatir tampilan pada content register-link */
+.register-link p a{
+   color: #fff;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+/* Memberikan hover */
+.register-link p a:hover{
+   text-decoration: underline;
+}

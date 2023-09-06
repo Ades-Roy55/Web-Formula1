@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/* untuk mendifinisikan warna, agar mudah ketika pemanggilan warna saat dibutuhkan */
+:root{
+   --main-color:#0d0507;
+   --black:#000;
+   --light-color: #868e96;
+}
+
+/* Mengatur Stylesheet untuk keseluruhan*/
+*{
+   font-family: 'poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   border: none;
+   text-transform:capitalize;
+   transition: all .2s linear;
+}
+
+::selection{
+   background: var(--main-color);
+   color: #fff;
+}
+
+/* Mengatur untuk html yang berisi ukuran font dan lain lain */
+html{
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+   scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar{
+   width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+   background: #fafafa;
+}
+
+html::-webkit-scrollbar-thumb{
+   background: var(--main-color);
+   border-radius: 5rem;
+}
+
+/* Mengatur untuk keseluruhan section */
+section{
+   padding: 2rem 9%;
+}
+
+/* Mengatur posisi serta warna pada kelas heading */
+.heading{
+   font-size: 4rem;
+   text-align: center;
+   padding-top: 4rem;
+   padding-bottom: 2rem;
+   color: var(--black);
+   text-transform: uppercase;
+}
+
+/* Memberikan warna pada text untuk span yang ada pada class heading */
+.heading span{
+   text-transform: uppercase;
+   color: red;
+}
+
+/* Mengatur jarak background dan warna utuk class btn */
+.btn{
+   margin-top: 1rem;
+   display: inline-block;
+   padding: .8rem 3rem;
+   background: #fff;
+   font-weight: 500;
+   cursor: pointer;
+   color: red;
+   font-size: 1.7rem;
+}
+
+/* Untuk memberikan hover pada class btn */
+.btn:hover{
+   background: red;
+   color: #fff;
+   letter-spacing: .1rem;
+}
+
+/* -------------------------------------Header Starts............................ */
+/* Mengatur posisi pada header */
+.header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   padding: 3rem 9%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: rgba(16, 2, 2, 0.009);
+   box-shadow: 0rem .1rem .5rem rgba(0, 0, 0, .1);
+   z-index: 1000;
+}
+
+/* mengatur ukuran font, warna, ketebalan pada class logo */
+.header .logo{
+   font-size: 2.5rem;
+   color: #fff;
+   font-weight: bold;
+   text-transform: uppercase;
+   letter-spacing: .1rem;
+}
+
+.header .logo span{
+   color: red;
+   text-transform: uppercase;
+}
+
+/* Mengatur menu pada class menu yang ada pada navbar */
+.nav-menu{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 40px;
+}
+
+/* Ini akan terjadi ketika navmenu active */
+.nav-menu.active{
+   display: none;
+}
+
+.nav-link{
+   transition: 0.7 ease;
+}
+
+/* stylesheet untuk li dan a */
+li a{
+   list-style-type: none;
+   display: flex;
+   gap: 16px;
+}
+
+.header .navbar li{
+   list-style: none;
+}
+
+.header .navbar{
+   display: flex;
+   gap: 2rem;
+}
+
+.header .navbar li a{
+   text-decoration: none;
+   font-size: 1.7rem;
+   color: #fff;
+   margin: 0 1rem;
+}
+
+.header .navbar li a:hover{
+   color: black;
+}
+
+/* Mengatur icons pada header */
+.header .icons{
+   display: none;
+   font-size: 2.5rem;
+   color: #fff;
+   padding: .5rem;
+   cursor: pointer;
+   margin-left: 1rem;
+}
+
+
+
+.header .icons div:hover{
+   transform: rotate(180deg);
+   color: red;
+}
+
+
+/* Mengtur icons a yang ada pada class header */
+.header .icons a{
+   border: 1px black solid;
+   font-size: 1.5rem;
+   letter-spacing: .1rem;
+   color: #fff;
+   background: red;
+   font-weight: 500;
+   text-transform: uppercase;
+   padding: .8rem 2rem;
+}
+
+.header .icons .btn{
+   border-radius: 20px;
+}
+
+.header .icons a:hover{
+   color: red;
+   background: #fff;
+}
+
+#menu-btn{
+   display: none;
+}
+
+.header.active{
+   padding: 2rem 9%;
+   background: rgba(0, 0, 0,.9);
+}
+/* -----------------------------------------Header ends-------------------------------------- */
+
+
+/* -----------------------------------------home section starts-------------------------------------- */
+
+.home{
+   min-height: 100vh;
+   padding: 0%;
+}
+
+.home .home-slider .box{
+   background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
+   background: url('../img/header.png') no-repeat;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+   background-size: cover !important;
+   background-position: center !important;
+}
+
+.home .home-slider .box .content{
+   text-align: center;
+   max-width: 70rem;
+}
+
+.home .home-slider .box .content h3{
+   font-size: 5rem;
+   color: #fff;
+   text-transform: uppercase;
+   transition-delay: .2s;
+}
+
+.home .home-slider .box .content p{
+   font-size: 1.7rem;
+   font-weight: lighter;
+   line-height: 1.8;
+   color: #eee;
+   padding: 1rem 0;
+   transition-delay: .4s;
+}
+
+.home .home-slider .box .button .btn-1{
+   background: red;
+   color: #fff;
+   margin-right: .5rem;
+}
+
+.home .home-slider .box .button .btn-1:hover{
+   background: #fff;
+   color: red;
+}
+
+.home .home-slider .box .button{
+   transition-delay: .6s;
+}
+
+
+/* --------------------------------------------home section ends------------------------------------------- */
+
+/* ---------------------------------------------Tabel---------------------------------------------------------- */
+
+.container{
+   width: 100%;
+}
+table{
+   border-collapse: collapse;
+   text-align: center;
+   width: 100%;
+   padding: 200px;
+}
+
+thead, tbody{
+   background-color: rgb(206, 38, 38);
+}
+tr:nth-child(even){
+   background-color: white;
+}
+
+tbody tr:hover {
+   transform: scale(1.02);
+   box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+}
+
+th, td{
+   border: none;
+   padding: 8px;
+   font-size: 1.5rem;
+   width: 30rem;
+}
+
+
+/* ---------------------------------------------Tabel End-------------------------------------------------------- */
+
+/* -------------------------------------------------race section start------------------------------------------------ */
+
+.race{
+   background: #eee;
+}
+
+.race .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   padding-top: 2rem;
+   padding-bottom: 5rem;
+}
+
+.race .box-container .box{
+   background: #fff;
+   overflow: hidden;
+
+}
+
+.race .box-container .box .content{
+   padding: 2rem;
+}
+
+.race .box-container .box .content h3{
+   font-size: 2rem;
+   font-weight: 500;
+   padding: .5rem;
+}
+
+.race .box-container .box .content p{
+   color: #333;
+   font-size: 1.5rem;
+   line-height: 1.8;
+}
+
+.race .box-container .box .icon{
+   padding: 0 2rem;
+}
+
+.race .box-container .box .icon span{
+   display: block;
+   font-size: 1.3rem;
+   color: #333;
+   padding: .3rem 0;
+}
+
+.race .box-container .box .icon span{
+   margin-right: .5rem;
+}
+
+.race .box-container .box .btn{
+   margin: 1.5rem 2rem;
+   background: red;
+   color: #fff;
+}
+
+.race .box-container .box .btn:hover{
+   background: #f66a97;
+
+}
+
+.race .box-container .box img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+
+/* ---------------------------------------------------race section :end----------------------------------------------- */
+
+
+/* ------------------------------------------------------Drivers section :start------------------------------------------- */
+
+.driver .driver-slider{
+   padding-bottom: 4rem;
+}
+
+.driver .driver-slider .box{
+   position: relative;
+   text-align: center;
+   overflow: hidden;
+   margin: 1rem 0;
+}
+
+.driver .driver-slider .box .image{
+   height: 40rem;
+   width: 100%;
+}
+
+.driver .driver-slider .box .image img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+
+.driver .driver-slider .box .name{
+   padding: 2rem 0;
+}
+
+.driver .driver-slider .box h1{
+   font-size: 3rem;
+   color: #0a414f;
+   font-weight: 600;
+}
+
+.driver .driver-slider .box p{
+   font-size: 2rem;
+   color: #7188aa;
+
+}
+
+/* --------------------------------------------------------Driver section :end--------------------------------------------- */
+
+/* -----------------------------------------------------------Footer------------------------------------------------------------------- */
+
+footer{
+   position: absolute;
+   left: 0;
+   right: 0;
+   box-sizing: border-box;
+   background: #111;
+   height: auto;
+   font-family:sans-serif;
+   color: #fff;
+}
+
+.footer-content{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+}
+
+.footer-content h3{
+   font-size: 1.8rem;
+   font-weight: 400;
+   text-transform: capitalize;
+   line-height: 3rem;
+}
+
+.footer-content p{
+   max-width: 500px;
+   margin: 10px auto;
+   line-height: 13px;
+   font-size: 14px;
+}
+.socials{
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+   margin: 0 10px;
+}
+
+.socials a{
+   text-decoration: none;
+   color: #fff;
+   margin: 20px;
+}
+
+.socials a i{
+   font-size: 1.1rem;
+   transition: color .4s ease;
+}
+
+.socials a:hover{
+   color: red;
+}
+
+.footer-buttom{
+   background: #000;
+   width: 100vw;
+   padding: 20px 0;
+   text-align: center;
+}
+
+.footer-buttom p{
+   font-size: 14px;
+   word-spacing: 2px;
+   text-transform: capitalize;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+
+}
+.footer-buttom span{
+   text-transform: uppercase;
+   opacity: .4;
+   font-weight: 200;
+}
+
+/* ---------------------------------------------Coba------------------------------------------------- */
+.coba .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   gap: 1.5rem;
+}
+
+.coba .box-container .box{
+   padding: 1rem;
+   text-align: center;
+   border: 1px solid rgb(244, 221, 221);
+}
+
+.coba .box-container .box img{
+   border-radius: 100px;
+   height: 10rem;
+}
+
+.coba .box-container .box h3{
+   color: #000;
+   font-size: 2rem;
+   padding: 1rem 0;
+}
+
+.coba .box-container .box:hover{
+  background: black;
+}
+
+.coba .box-container .box:hover > h3{
+   color: #fff;
+ }
+ 
+
+/* -----------------------------------------------Media section------------------------------------- */
+@media (max-width:991px){
+   html{
+      font-size: 55%;
+   }
+
+   .header{
+      padding: 2rem;
+   }
+
+   .header.active{
+      padding: 2rem;
+   }
+   .nav{
+      display: block;
+   }
+
+   #open{
+      display: none;
+   }
+
+
+   section{
+      padding: 2rem;
+   }
+   table{
+      font-size: 1rem;
+      width: 100%;
+   }
+
+   .home-slider{
+      padding: 2rem;
+   }
+
+}
+
+/* -----------------------------------------------------For maxWidth 768px---------------------------------------------- */
+@media (max-width:768px){
+   .header .icons{
+      z-index: 10;
+      display:  block;
+   }
+   #menu-btn{
+      display: inline-block;
+   }
+
+   #open{
+      display: block;
+   }
+
+   .icons.active .btn:nth-child(2){
+      opacity: 0;
+   }
+
+   .icons.active .btn:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+   }
+
+   .icons.active .btn:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+   }
+   .header .navbar{
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40%;
+      height: 100vh;
+      justify-content: center;
+      background-color: red;
+      transform: translateX(100%);
+   }
+   .header .slide{
+      transform: translateX(0);
+   }
+   .header .navbar .nav-menu{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+   }
+
+   table{
+      font-size: 1rem;
+      width: 100%;
+   }
+   .home-slider{
+      background-position: left;
+      justify-content: center;
+      text-align: center;
+      /* padding: 2rem; */
+   }
+   .home-slider .box h3{
+      font-size: 4.5rem;
+   }
+}
+
+
+
+/* --------------------------------------------------------For maxWidth 450px--------------------------------------------- */
+
+@media (max-width:450px){
+   html{
+      font-size: 50%;
+   }
+
+   .header .icons a{
+      letter-spacing: none;
+      font-size: 1.3rem;
+      padding: 1rem;
+   }
+
+   #open{
+      display: block;
+   }
+
+   table{
+      font-size: 1rem;
+      width: 100%;
+   }
+
+
+   .home-slider{
+      padding: 2rem;
+
+   }
+
+
+}
+
+/* --------------------------------------------------------------for Maxwdith 320----------------------------------- */
+@media (max-width:320px){
+   html{
+      font-size: 50%;
+   }
+
+   .header .icons a{
+      letter-spacing: none;
+      font-size: 1.3rem;
+      padding: 1rem;
+   }
+
+   #open{
+      display: block;
+   }
+
+   .container{
+      overflow-y: scroll;
+   }
+
+   table{
+      font-size: 1rem;
+      width: 100%;
+   }
+
+   .home-slider{
+      background-position: left;
+      justify-content: center;
+      text-align: center;
+   }
+
+   .home-slider{
+      padding: 2rem;
+
+   }
+
+
+}
